@@ -1,0 +1,11 @@
+const COLORS = {
+    DARK_BROWN :'#40312A',
+    LIGHT_BROWN:'#5B4F43',
+    BEIGE:'#FDD598',
+    ULTRA_LIGHT_RED:'#F0E8E6',
+    LIGHT_RED:'#A65528',
+    DARK_RED:'#702A2C',
+    LIGHT_BLUE:'#7cb3bf',
+    TYPOGRAPHY:'#2222222',
+    HEADING:'#482b2d'
+}
