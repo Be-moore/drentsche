@@ -37,6 +37,9 @@ const NavBar = () => {
               <CustomButton size="large">
                   <Link className={classes.anchor} to='/sponsors'>Sponsoren</Link> 
               </CustomButton>
+              <CustomButton size="large">
+                  <Link className={classes.anchor} to='/contact'>Contact</Link> 
+              </CustomButton>
           </div>
         </CustomToolBar>
       </CustomHeader>

@@ -7,11 +7,8 @@ import MAIN_BACKGROUND from '../images/bg.jpg';
 
 export const useWrapperStyles = makeStyles((theme)=>({
     root :{
-        
-        
     }
 }))
-
 export const useHeaderStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
@@ -43,7 +40,6 @@ export const useHeaderStyles = makeStyles((theme) => ({
         }
     }
   }));
-
   export const useHomeStyles = makeStyles((theme)=> ({
       homeWrapper:{
           position:'relative',
@@ -75,7 +71,6 @@ export const useHeaderStyles = makeStyles((theme) => ({
         '& > *':{
             transform:'skew(12deg)',
         }
-
     },
     homeGrid:{
         display:'flex',
@@ -92,12 +87,12 @@ export const useHeaderStyles = makeStyles((theme) => ({
         },
         '&:last-child':{
             backgroundColor:"rgb(124, 179, 191,.6)",
-            color:COLORS.LIGHT_BROWN
+            opacity:.8
         }
     },
     homeHeader:{
         fontWeight:'700',
-        opacity:.8
+        opacity:.7
     },
     banner:{
         padding:'1rem',
@@ -110,7 +105,7 @@ export const useHeaderStyles = makeStyles((theme) => ({
        padding:'1rem',
        display:'flex',
        marginTop:'2rem',
-       justifyContent:'space-around',
+       justifyContent:'center',
        cursor:'pointer'
     },
     avatar:{
@@ -120,8 +115,70 @@ export const useHeaderStyles = makeStyles((theme) => ({
             width:'88%'
         }
     }
-    
   }));
+  export const useGenericWrapper = makeStyles((theme)=> ({
+      root: {
+        width:'90%',
+        margin:'0 auto',
+        minHeight:'70vh',
+        backgroundImage:`url(${MAIN_BACKGROUND})`,
+        backgroundPosition:'center',
+        backgroundRepeat:'repeat',
+        backgroundSize:'cover',
+        marginTop:'2rem'
+      }
+  }))
+  export const useAboutStyles = makeStyles((theme)=> ({
+    paragraph: {
+        margin:'1.5rem 0',
+        padding:'1rem',
+    },
+    paper:{
+        padding:'4rem',
+        
+    },
+    text:{
+        fontSize:'1.3rem',
+        lineHeight:'45px'
+    }
+}))
+
+  export const useTitleStyles = makeStyles((theme)=>({
+       root:{
+           padding:'5rem',
+        },
+        title:{
+           fontSize:'4rem',
+           fontWeight:'700',
+           color:COLORS.LIGHT_BLUE
+       }
+  }))
+
+  export const useCardStyle = makeStyles({
+    root: {
+      maxWidth: 520,
+      display:'flex',
+    },
+    title:{
+        fontWeight:'700'
+    },
+    description:{
+        marginTop:'1rem',
+        marginBottom:'1rem',
+        fontSize:'1rem'
+    },
+    grid : {
+       display:'flex',
+       justifyContent:'center',
+       marginBottom:'5rem'
+    }
+  });
+
+
+
+
+
+  /// --------------  compoent overrides ------------- /// 
 
   export const CustomHeader = withStyles({
       root:{
