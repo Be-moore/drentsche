@@ -7,6 +7,9 @@ import ListItem from "@material-ui/core/ListItem"
 import ListItemText from "@material-ui/core/ListItemText"
 import {Link } from 'react-router-dom';
 import { useHeaderStyles } from "../../styles/overRides"
+import { withRouter } from "react-router";
+
+
 const useStyles = makeStyles({
   list: {
     width: 250,
@@ -22,11 +25,14 @@ const useStyles = makeStyles({
 
 
 
-const SideDrawer = ({ state, toggleDrawer }) => {
-  console.log(state)
+const SideDrawer = ({ state, toggleDrawer,history }) => {
+  
   const classes = useStyles()
   const headerStyles = useHeaderStyles();
 
+  const handleRoute = (route) => {
+    history.push(route);
+  }
   const links = [
     {path:'/home',text:'Home'},
     {path:'/about',text:'Over ons'},
@@ -51,10 +57,12 @@ const SideDrawer = ({ state, toggleDrawer }) => {
       <List>
         {links.map((item, index) => (
           <ListItem button key={index}>
-            <ListItemText className={classes.listText}>
-              <Link 
-                onClick={toggleDrawer('right',false)}
-                className={headerStyles.anchor} to={item.path}>{item.text}</Link>
+            <ListItemText
+                onClickCapture={toggleDrawer('right',false)}
+                onClick={()=>handleRoute(item.path)} 
+                className={classes.listText}
+               >
+             {item.text}
            </ListItemText>
           </ListItem>
         ))}
@@ -77,4 +85,4 @@ const SideDrawer = ({ state, toggleDrawer }) => {
   )
 }
 
-export default SideDrawer
+export default withRouter(SideDrawer)

@@ -5,8 +5,9 @@ import { Menu } from "@material-ui/icons"
 import SideDrawer from "./common/SideDrawer";
 import { CustomHeader,CustomButton,CustomToolBar,useHeaderStyles } from '../styles/overRides';
 import PlaceHolder from '../images/placeholder.png'
+import { withRouter } from "react-router";
 
-const NavBar = () => {
+const NavBar = (props) => {
     const classes = useHeaderStyles();
     const [state, setState] = useState({
         right: false,
@@ -21,7 +22,9 @@ const NavBar = () => {
         }
         setState({ ...state, right: open })
       }
-    
+    const handleRoute = (route) => {
+      props.history.push(route);
+    }
     return (
     <div className={classes.root}>
       <CustomHeader elevation={0} position="static">
@@ -30,32 +33,54 @@ const NavBar = () => {
             <img className={classes.img} alt="Company Logo" src={PlaceHolder} />
           </div>
           <div className={classes.menu}>
-              <CustomButton size="large">
-                  <Link className={classes.anchor} to='/home'>Home</Link> 
+              <CustomButton  
+                onClick={()=> handleRoute('/')}
+              
+              size="large">
+                  Home
               </CustomButton>
-              <CustomButton size="large">
-                  <Link className={classes.anchor} to='/about'>Over ons</Link> 
+              <CustomButton 
+                onClick={()=> handleRoute('/about')}
+              
+              size="large">
+                  Over ons 
               </CustomButton>
-              <CustomButton size="large">
-                  <Link className={classes.anchor} to='/management'>Bestuur</Link> 
+              <CustomButton 
+                onClick={()=> handleRoute('/management')}
+              
+              size="large">
+                  Bestuur
               </CustomButton>
-              <CustomButton size="large">
-                  <Link className={classes.anchor} to='/lessons'>Lessen</Link> 
+              <CustomButton 
+                onClick={()=> handleRoute('/lessons')}
+              
+              size="large">
+                  Lessen
               </CustomButton>
-              <CustomButton size="large">
-                  <Link className={classes.anchor} to='/members'>Lidmaatschap</Link> 
+              <CustomButton 
+                onClick={()=> handleRoute('/members')}
+              size="large">
+                  Lidmaatschap
               </CustomButton>
-              <CustomButton size="large">
-                  <Link className={classes.anchor} to='/agenda'>Agenda</Link> 
+              <CustomButton 
+                onClick={()=> handleRoute('/agenda')}
+              size="large">
+                  Agenda
               </CustomButton>
-              <CustomButton size="large">
-                  <Link className={classes.anchor} to='/rules'>Reglement</Link> 
+              <CustomButton 
+                onClick={()=> handleRoute('/rules')}
+              size="large">
+                  Reglement
               </CustomButton>
-              <CustomButton size="large">
-                  <Link className={classes.anchor} to='/sponsors'>Sponsoren</Link> 
+              <CustomButton 
+                onClick={()=> handleRoute('/sponsors')}
+              size="large">
+                  Sponsoren
               </CustomButton>
-              <CustomButton size="large">
-                  <Link className={classes.anchor} to='/contact'>Contact</Link> 
+              <CustomButton 
+                onClick={()=> handleRoute('/contact')}
+              size="large">
+                  Contact
               </CustomButton>
           </div>
           <IconButton
@@ -70,37 +95,7 @@ const NavBar = () => {
         <SideDrawer state={state} toggleDrawer={toggleDrawer} />
       </CustomHeader>
     </div>
-
-    // <div>
-    //     <nav>
-    //         <ul>
-    //             <li>
-    //                 <Link to="/">Home</Link>
-    //             </li>
-    //             <li>
-    //                 <Link to="/lessons">Ablessonsout</Link>
-    //             </li>
-    //             <li>
-    //                 <Link to="/management">management</Link>
-    //             </li>
-    //             <li>
-    //                 <Link to="/members">members</Link>
-    //             </li>
-    //             <li>
-    //                 <Link to="/agenda">agenda</Link>
-    //             </li>
-    //             <li>
-    //                 <Link to="/sponsors">sponsors</Link>
-    //             </li>
-    //             <li>
-    //                 <Link to="/contact">contact</Link>
-    //             </li>
-    //         </ul>
-    //     </nav>
-    // </div>
-    
-    
     )
 }
 
-export default NavBar;
+export default  withRouter(NavBar);
