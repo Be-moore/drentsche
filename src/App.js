@@ -16,7 +16,7 @@ import Sponsors from './components/Sponsors';
 import Contact from './components/Contact';
 import Rules from "./components/Rules";
 import {useWrapperStyles} from './styles/overRides'
-import {theme} from './styles/theme'
+import theme from './styles/theme'
 const App = () => {
   const classes = useWrapperStyles();
   return (

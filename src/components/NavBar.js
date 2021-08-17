@@ -1,10 +1,27 @@
+import {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { AppBar, Toolbar,IconButton,Typography,Button,Avatar } from '@material-ui/core'
+import { Menu } from "@material-ui/icons"
+import SideDrawer from "./common/SideDrawer";
 import { CustomHeader,CustomButton,CustomToolBar,useHeaderStyles } from '../styles/overRides';
 import PlaceHolder from '../images/placeholder.png'
 
 const NavBar = () => {
     const classes = useHeaderStyles();
+    const [state, setState] = useState({
+        right: false,
+      })
+
+      const toggleDrawer = (anchor, open) => event => {
+        if (
+          event.type === "keydown" &&
+          (event.key === "Tab" || event.key === "Shift")
+        ) {
+          return
+        }
+        setState({ ...state, right: open })
+      }
+    
     return (
     <div className={classes.root}>
       <CustomHeader elevation={0} position="static">
@@ -41,7 +58,16 @@ const NavBar = () => {
                   <Link className={classes.anchor} to='/contact'>Contact</Link> 
               </CustomButton>
           </div>
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+            aria-label="menu"
+            onClick={toggleDrawer("right", true)}
+          >
+            <Menu />
+          </IconButton>
         </CustomToolBar>
+        <SideDrawer state={state} toggleDrawer={toggleDrawer} />
       </CustomHeader>
     </div>
 

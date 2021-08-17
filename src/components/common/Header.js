@@ -7,7 +7,7 @@ return (
 <div className={classes.root}>
     <Grid container>  
        <Grid item >
-            <Typography className={classes.title}>{title}</Typography>  
+            <Typography variant='h2' className={classes.title}>{title}</Typography>  
        </Grid>
    </Grid>
 </div>
