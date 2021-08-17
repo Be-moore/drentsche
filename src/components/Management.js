@@ -24,6 +24,7 @@ const Management = () => {
                     description2={`Wij proberen met De Drentsche Aa een vereniging op te bouwen waarin we op een plezierige manier met elkaar van de paardensport kunnen genieten. Met de ervaring die we meenemen in het bestuur, hopen we een kwalitatief goed aanbod te doen in instructie en activiteiten. We hopen het verenigingsgevoel aan te wakkeren en leden te enthousiasmeren voor vrijwilligerstaken.`}
                     description3={`Bij vragen over algemene zaken kun je contact met mij opnemen.`}
                 />
+                
             </Grid>
             <Grid className={classes.grid} item lg={6} md={12} sm={12}>
                 <CustomCard 
