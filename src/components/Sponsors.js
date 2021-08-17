@@ -17,13 +17,13 @@ const Sponsors = () => {
                                 Een vereniging kan niet bestaan en floreren zonder hulp van sponsoren. Wij bedanken de volgende sponsoren voor hun ondersteuning van onze vereniging:
                             </Typography>
                             <Typography className={classes.text} variant='body1' >
-                                Stal Hulzebos: <a target='_blank' href="https://www.stal-hulzebos.nl">www.stal-hulzebos.nl</a>
+                                Stal Hulzebos: <a target='_blank' rel="noreferrer" href="https://www.stal-hulzebos.nl">www.stal-hulzebos.nl</a>
                             </Typography>
                             <Typography className={classes.text} variant='body1' >
-                                Trainingsstal Koolen: <a target='_blank' href="https://www.stalkoolen.nl">www.stal-hulzebos.nl</a>
+                                Trainingsstal Koolen: <a target='_blank' rel="noreferrer" href="https://www.stalkoolen.nl">www.stal-hulzebos.nl</a>
                             </Typography>
                             <Typography className={classes.text} variant='body1' >
-                                Expert Zuidlaren/Haren: <a target='_blank' href="https://www.expert.nl/winkels/zuidlaren">Expert Zuidlaren | Expert.nl</a> & <a target='_blank' href="https://www.expert.nl/winkels/haren">Expert Haren</a>
+                                Expert Zuidlaren/Haren: <a target='_blank' rel="noreferrer" href="https://www.expert.nl/winkels/zuidlaren">Expert Zuidlaren | Expert.nl</a> & <a target='_blank' rel="noreferrer" href="https://www.expert.nl/winkels/haren">Expert Haren</a>
                             </Typography>
                             <Typography className={classes.text} variant='body1' >
                                 Loonbedrijf Peter Ziel

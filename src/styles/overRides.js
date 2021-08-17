@@ -305,7 +305,6 @@ export const useCardStyle = makeStyles({
     grid: {
         display: 'flex',
         justifyContent: 'center',
-        marginBottom: '5rem'
     }
 });
 

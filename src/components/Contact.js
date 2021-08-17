@@ -18,7 +18,7 @@ const Contact = () => {
                     <Grid alignItems="flex-start" container>
                         <Grid item lg={6} md={12} sm={12} xs={12} >
                             <div className={contactClasses.imageHolder}>
-                               <img  className={contactClasses.image} src={FRONT} />
+                               <img  alt="front side of the stables" className={contactClasses.image} src={FRONT} />
                             </div>
                         </Grid>
                         <Grid item lg={6} md={12} sm={12} xs={12}>
@@ -66,7 +66,7 @@ const Contact = () => {
                         </Grid>
                         <Grid item lg={6} md={12} sm={12} xs={12} >
                             <div className={contactClasses.imageHolder}>
-                               <img  className={contactClasses.image} src={SIDE} />
+                               <img  alt="side of the stables" className={contactClasses.image} src={SIDE} />
                             </div>
                         </Grid>
                     </Grid>

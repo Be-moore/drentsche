@@ -5,8 +5,6 @@ import Drawer from "@material-ui/core/Drawer"
 import List from "@material-ui/core/List"
 import ListItem from "@material-ui/core/ListItem"
 import ListItemText from "@material-ui/core/ListItemText"
-import {Link } from 'react-router-dom';
-import { useHeaderStyles } from "../../styles/overRides"
 import { withRouter } from "react-router";
 
 
@@ -28,7 +26,6 @@ const useStyles = makeStyles({
 const SideDrawer = ({ state, toggleDrawer,history }) => {
   
   const classes = useStyles()
-  const headerStyles = useHeaderStyles();
 
   const handleRoute = (route) => {
     history.push(route);

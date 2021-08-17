@@ -11,7 +11,7 @@ const Management = () => {
     const generics = useGenericWrapper()
     const  classes =  useCardStyle()
     return <div className={generics.root}>
-        <Grid container >
+        <Grid container spacing={4} >
             <Grid item xs={12}>
                 <Header title={`Bestuur`} />
             </Grid>
