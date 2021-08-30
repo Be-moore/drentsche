@@ -7,6 +7,7 @@ import PlaceHolder from '../images/placeholder.png'
 import { withRouter } from "react-router";
 
 const NavBar = (props) => {
+  console.log("Navbar Loaded");
     const classes = useHeaderStyles();
     const [state, setState] = useState({
         right: false,

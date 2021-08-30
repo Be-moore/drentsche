@@ -2,6 +2,7 @@ import Header from "./common/Header";
 import { useGenericWrapper,useAboutStyles } from "../styles/overRides";
 import { Grid, Typography,Paper } from "@material-ui/core";
 const About = () => {
+    console.log("ABOUT lOADED")
     const generics = useGenericWrapper()
     const classes = useAboutStyles();
     return (

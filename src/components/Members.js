@@ -2,6 +2,7 @@ import Header from "./common/Header";
 import { useGenericWrapper, useAboutStyles, useTableStyles } from "../styles/overRides";
 import { Grid, Typography, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@material-ui/core";
 const Members = () => {
+    console.log("Members Loaded")
     const generics = useGenericWrapper()
     const classes = useAboutStyles();
     const tableClasses = useTableStyles();

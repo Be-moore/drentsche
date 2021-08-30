@@ -2,6 +2,7 @@ import Header from "./common/Header";
 import { useGenericWrapper,useAboutStyles } from "../styles/overRides";
 import { Grid, Typography,Paper } from "@material-ui/core";
 const Lessons = () => {
+    console.log("Lessons Loaded");
     const generics = useGenericWrapper()
     const classes = useAboutStyles();
     return (
@@ -15,11 +16,11 @@ const Lessons = () => {
                       <Paper className={classes.paper} elevation={2} square >
                             <Typography className={classes.text} variant='body1' >
                               De verenigingslessen worden op donderdagavond gehouden in de professionele accommodatie Sunrise Stables te Assen. 
+                           </Typography> 
                             <Typography className={classes.text} variant='body1'>
                                Uiteraard is deze accommodatie in het bezit van het veiligheidscertificaat. 
                                De ponylessen worden gegeven door Miranda Trip. De lessen voor volwassen worden gegeven door Menno Waninge.
                             </Typography>
-                           </Typography> 
                         </Paper>
                   </div>
                   <div className={classes.paragraph}>

@@ -1,25 +1,31 @@
 import { ThemeProvider } from '@material-ui/core/styles';
+import {lazy,Suspense} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect
 } from "react-router-dom";
-import NavBar from './components/NavBar';
-import Home from './components/Home';
-import About from "./components/About";
-import Lessons from './components/Lessons';
-import Management from './components/Management';
-import Members from './components/Members';
-import Agenda from './components/Agenda';
-import Sponsors from './components/Sponsors';
-import Contact from './components/Contact';
-import Rules from "./components/Rules";
 import {useWrapperStyles} from './styles/overRides'
 import theme from './styles/theme'
+
+const NavBar = lazy(()=> import('./components/NavBar'));
+const Home = lazy(()=> import('./components/Home'));
+const About = lazy(()=> import('./components/About'));
+const Lessons = lazy(()=> import('./components/Lessons'));
+const Management = lazy(()=> import('./components/Management'));
+const Members = lazy(()=> import('./components/Members'));
+const Agenda = lazy(()=> import('./components/Agenda'));
+const Sponsors = lazy(()=> import('./components/Sponsors'));
+const Contact = lazy(()=> import('./components/Contact'));
+const Rules = lazy(()=> import('./components/Rules'));
+
+
+
 const App = () => {
   const classes = useWrapperStyles();
   return (
+      <Suspense fallback={<div>... Loading .... </div>} >
     <ThemeProvider theme={theme} >
     <div className={classes.root}>
         <Router>
@@ -41,6 +47,7 @@ const App = () => {
         </Router>
     </div>
     </ThemeProvider>
+      </Suspense>
   );
 }
 

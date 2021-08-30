@@ -8,6 +8,7 @@ import MARCEL from '../images/members/marcel.png';
 import MARIJKE from '../images/members/marijke.png';
 import NANCY from '../images/members/nancy.png';
 const Management = () => {
+    console.log("Management Loaded");
     const generics = useGenericWrapper()
     const  classes =  useCardStyle()
     return <div className={generics.root}>

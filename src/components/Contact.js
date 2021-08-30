@@ -4,6 +4,10 @@ import { Grid, Paper, Typography } from "@material-ui/core";
 import FRONT from '../images/location/front.jpg'
 import SIDE from '../images/location/side.jpg';
 const Contact = () => {
+  
+
+console.log("Contact Loaded");
+
     const generics = useGenericWrapper()
     const classes = useAboutStyles();
     const contactClasses = useContactStyles();

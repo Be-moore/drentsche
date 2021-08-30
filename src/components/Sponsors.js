@@ -2,6 +2,7 @@ import Header from "./common/Header";
 import { useGenericWrapper, useAboutStyles } from "../styles/overRides";
 import { Grid, Typography, Paper } from "@material-ui/core";
 const Sponsors = () => {
+    console.log("Sponsors Loaded");
     const generics = useGenericWrapper()
     const classes = useAboutStyles();
     return (
@@ -20,7 +21,7 @@ const Sponsors = () => {
                                 Stal Hulzebos: <a target='_blank' rel="noreferrer" href="https://www.stal-hulzebos.nl">www.stal-hulzebos.nl</a>
                             </Typography>
                             <Typography className={classes.text} variant='body1' >
-                                Trainingsstal Koolen: <a target='_blank' rel="noreferrer" href="https://www.stalkoolen.nl">www.stal-hulzebos.nl</a>
+                                Trainingsstal Koolen: <a target='_blank' rel="noreferrer" href="https://www.stalkoolen.nl">www.stalkoolen.nl</a>
                             </Typography>
                             <Typography className={classes.text} variant='body1' >
                                 Expert Zuidlaren/Haren: <a target='_blank' rel="noreferrer" href="https://www.expert.nl/winkels/zuidlaren">Expert Zuidlaren | Expert.nl</a> & <a target='_blank' rel="noreferrer" href="https://www.expert.nl/winkels/haren">Expert Haren</a>
