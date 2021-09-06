@@ -310,7 +310,6 @@ export const useCardStyle = makeStyles({
        
     },
     action:{
-       ...addBorder('2px','blue')
     },
     media:{
      maxWidth:'100%',
