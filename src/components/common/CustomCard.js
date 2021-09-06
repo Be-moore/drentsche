@@ -18,7 +18,7 @@ export default function CustomCard({title,name,description1,description2,descrip
           className={classes.media}
           component="img"
           alt={title}
-          height="400"
+          height="300"
           image={photo}
           title={title}
         />

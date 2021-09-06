@@ -17,11 +17,10 @@ export const useHeaderStyles = makeStyles((theme) => ({
     },
     logo: {
         flexGrow: 2,
-
     },
     img: {
         padding: '0 1rem',
-        width: '200px',
+        width: '150px',
         maxWidth: '100%'
     },
     menu: {
@@ -289,10 +288,33 @@ export const useTitleStyles = makeStyles((theme) => ({
    
 }))
 
+export const useFooterStyles = makeStyles({
+    footerWrapper :{
+        padding:"3rem",
+        marginTop:'2rem'
+    },
+    imgHolder:{
+        maxWidth:'10rem',
+    },
+    img:{
+        maxWidth:'100%'
+    }
+    
+
+})
+
 export const useCardStyle = makeStyles({
     root: {
         maxWidth: 520,
         display: 'flex',
+       
+    },
+    action:{
+       ...addBorder('2px','blue')
+    },
+    media:{
+     maxWidth:'100%',
+     minHeight:'35rem'
     },
     title: {
         fontWeight: '700'

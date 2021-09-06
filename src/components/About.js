@@ -29,6 +29,7 @@ const About = () => {
                   <div className={classes.paragraph}>
                       <Paper className={classes.paper} elevation={2} square >
                             <Typography className={classes.text} variant='body1' >
+                            Ons voornemen is een actieve vereniging te worden als het gaat om het organiseren van wedstrijden en activiteiten.
                             Passend bij onze ambities hebben wij als uitvalsbasis de prachtige locatie van Sunrise Stables in Assen. Hier vinden onze verenigingslessen en overige activiteiten plaats.  
                            </Typography> 
                         </Paper>

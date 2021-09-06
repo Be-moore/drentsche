@@ -3,7 +3,7 @@ import { IconButton } from '@material-ui/core'
 import { Menu } from "@material-ui/icons"
 import SideDrawer from "./common/SideDrawer";
 import { CustomHeader,CustomButton,CustomToolBar,useHeaderStyles } from '../styles/overRides';
-import PlaceHolder from '../images/placeholder.png'
+import PlaceHolder from '../images/logo.jpg'
 import { withRouter } from "react-router";
 
 const NavBar = (props) => {

@@ -3,7 +3,7 @@ import { useGenericWrapper,useCardStyle } from "../styles/overRides";
 import { Grid } from "@material-ui/core";
 import CustomCard from './common/CustomCard';
 import PRESIDENT from '../images/members/president.jpg';
-import VICE from '../images/members/vice.jpg';
+import VICE from '../images/members/vice.png';
 import MARCEL from '../images/members/marcel.png';
 import MARIJKE from '../images/members/marijke.png';
 import NANCY from '../images/members/nancy.png';

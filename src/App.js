@@ -6,6 +6,7 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
+import Footer from './components/Footer';
 import {useWrapperStyles} from './styles/overRides'
 import theme from './styles/theme'
 
@@ -25,7 +26,7 @@ const Rules = lazy(()=> import('./components/Rules'));
 const App = () => {
   const classes = useWrapperStyles();
   return (
-      <Suspense fallback={<div>... Loading .... </div>} >
+    <Suspense fallback={<div>... Loading .... </div>} >
     <ThemeProvider theme={theme} >
     <div className={classes.root}>
         <Router>
@@ -45,6 +46,7 @@ const App = () => {
                </Route>
             </Switch>
         </Router>
+        <Footer/>
     </div>
     </ThemeProvider>
       </Suspense>
