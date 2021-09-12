@@ -16,7 +16,7 @@ const Home = () => {
                 window.open('https://www.instagram.com/rijvereniging_de_drentsche_aa','_blank') 
                 break;
             case 'facebook':
-                window.open('https://www.facebook.com/Rijvereniging-De-Drentsche-Aa-101992618870348','_blank')
+                window.open('https://www.facebook.com/Rijvereniging-De-Drentsche-Aa-101992618870348','_blank');break;
             default:
                 break;
         }
